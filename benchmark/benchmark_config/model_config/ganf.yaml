@@ -5,7 +5,7 @@ Base:
 ganf_SMD:
     dataset_id: SMD
     window_size: 100
-    stride: 1
+    stride: 50
     n_blocks: 1
     input_size: 1
     hidden_size: 32
@@ -48,8 +48,8 @@ ganf_ASD:
     device: 0
 ganf_SWAT:
     dataset_id: SWAT
-    window_size: 100
-    stride: 1
+    window_size: 50
+    stride: 50
     n_blocks: 1
     input_size: 1
     hidden_size: 32
