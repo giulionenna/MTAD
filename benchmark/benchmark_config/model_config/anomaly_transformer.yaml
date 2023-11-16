@@ -29,10 +29,10 @@ anomaly_transformer_ASD:
 anomaly_transformer_SWAT:
     dataset_id: SWAT
     batch_size: 128
-    window_size: 100
+    window_size: 50
     nb_epoch: 10
     l2_regularizer: 0.1
-    stride: 1
+    stride: 5
     num_workers: 1
     lr: 1.0e-4
     k: 3
