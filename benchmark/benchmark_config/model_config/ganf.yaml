@@ -49,7 +49,7 @@ ganf_ASD:
 ganf_SWAT:
     dataset_id: SWAT
     window_size: 50
-    stride: 50
+    stride: 5
     n_blocks: 1
     input_size: 1
     hidden_size: 32
