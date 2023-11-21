@@ -11,8 +11,8 @@ from .gmm import GMM
 from os import makedirs
 from os.path import exists, join
 
-import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior()
+
+tf.compat.v1.disable_v2_behavior()
 
 class DAGMM:
     """Deep Autoencoding Gaussian Mixture Model.
