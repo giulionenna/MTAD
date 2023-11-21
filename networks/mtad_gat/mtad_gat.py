@@ -209,6 +209,9 @@ class MTAD_GAT(nn.Module):
         anomaly_scores = np.mean(anomaly_scores, 1)
         if window_labels is not None:
             anomaly_label = (window_labels.sum(axis=1) > 0).astype(int)
+            from sklearn.metrics import roc_auc_score
+            auc_roc = roc_auc_score(window_labels, anomaly_scores)
+            logging.info("================= AUC-ROC SCORE: "+str(auc_roc)+"\n")
             return anomaly_scores, anomaly_label
         else:
             return anomaly_scores
