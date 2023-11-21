@@ -1,6 +1,7 @@
 import sys
 
 sys.path.append("../")
+sys.path.append("./")
 import logging
 import argparse
 from networks.anomaly_transformer.solver import AnomalyTransformer
@@ -93,8 +94,8 @@ if __name__ == "__main__":
         )
         tt.test_end()
 
-        train_anomaly_score, anomaly_label = model.predict_prob(
-            train_loader, test_windows_label
+        train_anomaly_score = model.predict_prob(
+            train_loader
         )
 
         store_entity(
