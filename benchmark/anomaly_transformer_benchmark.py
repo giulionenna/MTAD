@@ -1,6 +1,6 @@
 import sys
-
-sys.path.append("../")
+#sys.path.append('C:/Users/g.nenna/Documents/GitHub/MTAD/benchmark')
+sys.path.append("./")
 import logging
 import argparse
 from networks.anomaly_transformer.solver import AnomalyTransformer

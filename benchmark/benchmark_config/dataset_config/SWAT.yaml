@@ -1,8 +1,8 @@
 Base:
     dataset: "swat"
-    data_root: ../data/SWAT/
-    model_root: "./benchmark_exp_details"
-    benchmark_dir: "./benchmark_results"
+    data_root: data/SWAT/
+    model_root: "benchmark_exp_details"
+    benchmark_dir: "benchmark_results"
     train_postfix: "train.pkl"
     test_postfix: "test.pkl"
     test_label_postfix: "test_label.pkl"
