@@ -377,12 +377,9 @@ class AnomalyTransformer(object):
 
         attens_energy = np.concatenate(attens_energy, axis=0)
         anomaly_score = np.array(attens_energy).mean(axis=1)
-        
+
         if windows_label is not None:
             windows_label = (np.sum(windows_label, axis=1) >= 1) + 0
-            from sklearn.metrics import roc_auc_score
-            auc_roc = roc_auc_score(windows_label, anomaly_score)
-            logging.info("================= AUC-ROC SCORE: "+str(auc_roc)+"\n")
             return anomaly_score, windows_label
         else:
             return anomaly_score

@@ -24,8 +24,6 @@ def load_config(config_dir, experiment_id, eval_id=""):
     if not model_configs:
         model_configs = glob.glob(os.path.join(config_dir, "model_config/*.yaml"))
     if not model_configs:
-        model_configs = glob.glob(os.path.join(config_dir, "model_config\\*.yaml"))
-    if not model_configs:
         raise RuntimeError("config_dir={} is not valid!".format(config_dir))
     found_params = dict()
     for config in model_configs:
