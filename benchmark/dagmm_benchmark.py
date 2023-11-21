@@ -9,6 +9,10 @@ from common.utils import seed_everything, load_config, set_logger, print_to_json
 from common.evaluation import Evaluator, TimeTracker
 from common.exp import store_entity
 from networks.dagmm.dagmm import DAGMM
+import tensorflow as tf
+
+tf.compat.v1.disable_v2_behavior()
+
 
 seed_everything()
 if __name__ == "__main__":
